@@ -1,38 +1,116 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*:not(input, textarea):focus-visible {
+  outline: 2px dashed #812a9e;
+  outline-offset: 0.5rem;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+input:focus-visible, textarea:focus-visible {
+  border-color: #812a9e;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  align-items: center;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(120deg, #fccb90 0%, #d57eeb 100%);
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  width: 100vw;
+}
+.todo {
+  background-color: white;
+  border-radius: 3px;
+  box-shadow: 0px 0px 50px -15px black;
   display: flex;
   flex-direction: column;
+  min-width: 400px;
+  padding: 20px;
+  width: fit-content;
+}
+h1 {
+  margin-bottom: 20px;
+}
+.add {
+  display: flex;
+  font-size: 40px;
+  flex-direction: row;
+}
+.addElement {
+  border: none;
   align-items: center;
+  background-color: #812a9e;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  height: 40px;
+  user-select: none;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-left: 10px;
+  text-align: center;
+  width: 40px;
+}
+.addElement > p {
+  font-weight: 700;
+  font-size: 40px;
   color: white;
-}
 
-.App-link {
-  color: #61dafb;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input {
+  border-radius: 3px;
+  border: 1px solid #8f8f8f;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  width: 100%;
+  outline: none;
+  user-select: none;
+  padding-left: 10px;
+}
+input::placeholder {
+  font: 18px "Montserrat";
+}
+.bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.clearAll {
+  color: white;
+  background-color: #812a9e;
+  border-radius: 3px;
+  padding: 5px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+}
+.new {
+  display: flex;
+  flex-direction: row;
+  background-color:#e1e1e1;
+  color: black;
+  font-weight: 500;
+  font-size: 18px;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+.new > p {
+  padding-inline: 10px;
+}
+.trash {
+  background-color: red;
+  display: flex;
+  color: white;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  align-items: center;
+  padding: 7px;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
 }
